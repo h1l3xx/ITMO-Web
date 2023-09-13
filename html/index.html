@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Лабораторная работа №1</title>
+</head>
+<body>
+<header>
+    <h1>Маликов Александр. P3222 Вариант: 3287</h1>
+</header>
+<div class="X">
+    <label for="X_input" class="label">Введите X:</label>
+    <table id="X_input">
+        <tr>
+            <td>
+            <label>
+                <input name="X" type="checkbox" value="-4">
+                -4
+            </label>
+        </td>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="-3">
+                    -3
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="-2">
+                    -2
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="-1">
+                    -1
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="0">
+                    0
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="1">
+                    1
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="2">
+                    2
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="3">
+                    3
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input name="X" type="checkbox" value="4">
+                    4
+                </label>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <canvas id="graph" width="400" height="400" class="graph"></canvas>
+</div>
+<div>
+    <label for="Y_input" class="label">
+        Введите Y:
+    </label><br>
+    <input type="text" id="Y_input" maxlength="16">
+</div>
+<div>
+    <label for="R_input" class="label">Введите R:</label>
+    <table>
+        <tr>
+        <td>
+            <table id="R_input">
+                <tr>
+                    <td><label><input name="R" type="radio" value="1">1</label></td>
+                    <td><label><input name="R" type="radio" value="1.5">1.5</label></td>
+                    <td><label><input name="R" type="radio" value="2">2</label></td>
+                </tr>
+                <tr>
+                    <td><label><input name="R" type="radio" value="2.5">2.5</label></td>
+                    <td><label><input name="R" type="radio" value="3">3</label></td>
+                    <td><label><input name="R" type="radio" value="3.5">3.5</label></td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+    </table>
+</div>
+    <div>
+        <button id="checkButton"><label>Проверить</label></button>
+    </div>
+    <div id = resultContainer class="resultTable">
+        <span>Результатов пока нет.</span>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/Validator.js"></script>
+<script src="/js/Canvas.js"></script>
+<script src="/js/Main.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "sans-serif";
+}
+*{
+    font-family: 'Arial', fantasy;
+    font-size: 27px;
+}
+
+body {
+    display: inline;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #605CB1;
+    color: #91FD7E;
+}
+header{
+    font-family: serif;
+    color: #91FD7E;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+table{
+    border-collapse: separate;
+    border: none;
+    width: 300px;
+}
+
+label.request-label{
+    color: #91FD7E;
+}
+
+button {
+    margin-left: 85%;
+    margin-top: 30px;
+    background-color: #605CB1;
+    border: 2px solid #91FD7E;
+
+
+    text-align: center;
+    color: #91FD7E;
+    width: auto;
+    padding: 0.5em;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+button:hover{
+    background-color: #91FD7E;
+    border: 2px solid #605CB1;
+
+    color: #605CB1;
+
+}
+#X_input{
+    width: 300px;
+    margin-left: 200px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+#R_input{
+    width: 300px;
+    height: 100px;
+    margin-left: 200px;
+
+
+}
+#Y_input{
+    width: 300px;
+    height: 10%;
+    margin-left: 180px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border: 2px solid #605CB1;
+}
+
+
+
+input[type="checkbox"] {
+    transform: scale(2);
+    margin-right: 15%;
+    margin-top: 15px;
+    text-align: center;
+    border: 2px solid #605CB1;
+}
+input[type="radio"] {
+    transform: scale(2);
+    margin-right: 15%;
+    margin-top: 15px;
+    text-align: center;
+    border: 2px solid #605CB1;
+}
+input[type="text"]{
+    margin-top: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #605CB1;
+}
+.graph{
+    position: absolute;
+    margin-left: 50%;
+    bottom: 200px;
+
+}
+.values{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.resultTable{
+    position: absolute;
+    margin-left: 450px;
+}
+.resultTable > table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    text-align: center;
+}
+.resultTable > span{
+    font-size: 30px;
+}
+.label{
+    margin-left: 200px;
+}
