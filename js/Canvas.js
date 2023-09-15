@@ -8,7 +8,6 @@ class Canvas {
     }
 
     drawWithDot(x, y){
-        this.drawGraph()
         this.drawDot(x ,y)
     }
 

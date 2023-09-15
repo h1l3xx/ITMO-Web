@@ -8,38 +8,39 @@ window.onload = function () {
 
 
 
-
-    let checkboxes = document.querySelectorAll('input[type=checkbox]')
-    checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("click", () => {
-            checkboxes.forEach((check) => {
-                if (check !== checkbox) {
-                    check.checked = false;
-                }
-            });
-        });
-    });
-
     document.getElementById('checkButton').onclick = function (){
         if (validateY() && validateX()) {
-            let x = document.querySelector('input[type="checkbox"]:checked').value;
+            console.log( document.querySelectorAll('input[type="checkbox"]:checked'))
+            let x = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(el => x.push(el.value))
+            console.log(x)
             let y = document.getElementById("Y_input").value.replace(',', '.');
             let r = document.querySelector('input[type="radio"]:checked').value;
-            $.ajax({
-                type: 'GET',
-                url: '/php/check.php',
-                async: false,
-                data: { "x": x, "y": y, "r": r},
-                success: function (serverAnswer){
-                    console.log(serverAnswer)
-                    const jsonObject = JSON.parse(serverAnswer);
-                    document.getElementById("resultContainer").innerHTML = jsonObject.html;
-                    canvas.drawWithDot(
-                        jsonObject.xCoef,
-                        jsonObject.yCoef,
-                    );
-                }
-            });
+            canvas.drawGraph();
+            x.forEach((X) => {
+                $.ajax({
+                    type: 'GET',
+                    url: '/php/check.php',
+                    async: false,
+                    data: { "x": X, "y": y, "r": r},
+                    success: function (){
+
+
+                        // let host ="se.ifmo.ru/~s368475"
+
+                        let host = 'http://localhost:63342';
+
+                        let element = document.createElement("a");
+                        let a = document.documentElement.appendChild(element)
+                        a.href = `${host}/php/check.php`;
+                        a.target = '_frame';
+
+                        a.click();
+
+                        canvas.drawWithDot( X/r, y/r );
+                    }
+                });
+            })
         }
     }
 };

@@ -1,0 +1,24 @@
+*{
+    font-family: 'Arial', fantasy;
+    font-size: 27px;
+}
+
+body {
+    display: inline;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #605CB1;
+    color: #91FD7E;
+}
+header{
+    font-family: serif;
+    color: #91FD7E;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+table{
+    border-collapse: separate;
+    border: none;
+    width: 300px;
+}
