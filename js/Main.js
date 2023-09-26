@@ -23,8 +23,9 @@ window.onload = function () {
                     url: '/php/check.php',
                     async: false,
                     data: { "x": X, "y": y, "r": r},
-                    success: function (){
+                    success: function (serverAnswer){
 
+                        console.log(serverAnswer);
 
                         // let host ="se.ifmo.ru/~s368475"
 
